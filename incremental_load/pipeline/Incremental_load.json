@@ -122,7 +122,7 @@
 				]
 			},
 			{
-				"name": "Stored procedure writer water mark activity",
+				"name": "Stored_procedure_writer_water_mark_activity",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
