@@ -1,0 +1,9 @@
+{
+	"name": "salesdatapoc",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c73eb12e-cbce-43ba-b7b9-ac176c79e5c5",
+		"tenantId": "cf5cd4e9-a8a8-44cd-8fe6-d716f62684ac"
+	}
+}
