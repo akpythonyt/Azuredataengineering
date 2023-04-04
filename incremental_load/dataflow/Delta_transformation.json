@@ -1,0 +1,149 @@
+{
+	"name": "Delta_transformation",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Source_data_for_Etl",
+						"type": "DatasetReference"
+					},
+					"name": "datasource"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage_source",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sinktvseries"
+				},
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage_source",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sinkmovies"
+				},
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage_source",
+						"type": "LinkedServiceReference"
+					},
+					"name": "moviesbefore2000"
+				}
+			],
+			"transformations": [
+				{
+					"name": "replacingnullvalues"
+				},
+				{
+					"name": "moviessplit"
+				},
+				{
+					"name": "tvseriesmoviessplit"
+				},
+				{
+					"name": "maturedfiltertvseries",
+					"description": "Filter the mature series"
+				},
+				{
+					"name": "maturedfiltermovies"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          show_id as string,",
+				"          type as string,",
+				"          title as string,",
+				"          director as string,",
+				"          cast as string,",
+				"          country as string,",
+				"          date_added as string,",
+				"          release_year as string,",
+				"          rating as string,",
+				"          duration as string,",
+				"          listed_in as string,",
+				"          description as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> datasource",
+				"datasource derive(show_id = iifNull(show_id, 'Unknown'),",
+				"          type = iifNull(type, 'Unknown'),",
+				"          title = iifNull(title, 'Unknown'),",
+				"          director = iifNull(director, 'Unknown'),",
+				"          cast = iifNull(cast, 'Unknown'),",
+				"          country = iifNull(country, 'Unknown'),",
+				"          date_added = iifNull(date_added, 'Unknown'),",
+				"          release_year = iifNull(release_year, 'Unknown'),",
+				"          rating = iifNull(rating, 'Unknown'),",
+				"          duration = iifNull(duration, 'Unknown'),",
+				"          listed_in = iifNull(listed_in, 'Unknown'),",
+				"          description = iifNull(description, 'Unknown')) ~> replacingnullvalues",
+				"replacingnullvalues split(release_year>='2000',",
+				"     disjoint: false) ~> moviessplit@(moviesreleasedafter2000, moviesreleasedbefore2000)",
+				"moviessplit@moviesreleasedafter2000 split(type=='TV Show',",
+				"     type=='Movie',",
+				"     disjoint: false) ~> tvseriesmoviessplit@(tvseries, movies)",
+				"tvseriesmoviessplit@tvseries filter(rating!='18+') ~> maturedfiltertvseries",
+				"tvseriesmoviessplit@movies filter(rating!='18+') ~> maturedfiltermovies",
+				"maturedfiltertvseries sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     fileSystem: 'output',",
+				"     folderPath: 'Delta_load_output_TVseries',",
+				"     mergeSchema: false,",
+				"     autoCompact: false,",
+				"     optimizedWrite: false,",
+				"     vacuum: 0,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 0) ~> sinktvseries",
+				"maturedfiltermovies sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     fileSystem: 'output',",
+				"     folderPath: 'Delta_load_Movies',",
+				"     mergeSchema: false,",
+				"     autoCompact: false,",
+				"     optimizedWrite: false,",
+				"     vacuum: 0,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinkmovies",
+				"moviessplit@moviesreleasedbefore2000 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     mergeSchema: false,",
+				"     autoCompact: false,",
+				"     optimizedWrite: false,",
+				"     vacuum: 0,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> moviesbefore2000"
+			]
+		}
+	}
+}
