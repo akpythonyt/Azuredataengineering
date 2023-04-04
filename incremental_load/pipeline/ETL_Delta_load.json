@@ -1,0 +1,6 @@
+{
+	"name": "ETL_Delta_load",
+	"properties": {
+		"annotations": []
+	}
+}
