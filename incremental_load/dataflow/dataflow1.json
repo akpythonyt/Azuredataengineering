@@ -222,6 +222,8 @@
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
 				"     mapColumn(",
 				"          each(match(/* All input columns */ true()),",
 				"               /* Input name */ $$ = $$)",
