@@ -1,0 +1,88 @@
+{
+	"name": "glaccountmaster2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "gl_account_master.csv",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "BAL_SHEET_ACCT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CREATED_BY",
+				"type": "String"
+			},
+			{
+				"name": "CREATE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_GRP",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_MASTER_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "GRP_ACCT_NUM",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_TIME",
+				"type": "String"
+			},
+			{
+				"name": "PL_STMNT_ACCT_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE",
+				"type": "String"
+			}
+		]
+	}
+}

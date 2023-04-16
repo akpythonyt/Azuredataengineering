@@ -1,0 +1,188 @@
+{
+	"name": "cost_center",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "cost_center.csv",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "ALT_FUNCTN",
+				"type": "String"
+			},
+			{
+				"name": "BUS_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CITY",
+				"type": "String"
+			},
+			{
+				"name": "CMPNY_CODE_ID",
+				"type": "String"
+			},
+			{
+				"name": "CMPNY_CODE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_ID_SUBSEQUENT",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_01",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_02",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_03",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_04",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_ID",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CREATED_BY",
+				"type": "String"
+			},
+			{
+				"name": "CREATE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_AREA_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID",
+				"type": "String"
+			},
+			{
+				"name": "DEPARTMENT",
+				"type": "String"
+			},
+			{
+				"name": "DISTRICT",
+				"type": "String"
+			},
+			{
+				"name": "EQUITY_TYPE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "FAX",
+				"type": "String"
+			},
+			{
+				"name": "FUNCTN_CODE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_TIME",
+				"type": "String"
+			},
+			{
+				"name": "PERSON_IN_CHARGE",
+				"type": "String"
+			},
+			{
+				"name": "PHONE",
+				"type": "String"
+			},
+			{
+				"name": "PROFIT_CNTR_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "PROFIT_CNTR_ID",
+				"type": "String"
+			},
+			{
+				"name": "REGION_ID",
+				"type": "String"
+			},
+			{
+				"name": "REGION_NAME",
+				"type": "String"
+			},
+			{
+				"name": "STREET",
+				"type": "String"
+			},
+			{
+				"name": "TYPE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "VALID_FROM_DATE",
+				"type": "String"
+			},
+			{
+				"name": "VALID_TO_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ZIP",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE",
+				"type": "String"
+			}
+		]
+	}
+}

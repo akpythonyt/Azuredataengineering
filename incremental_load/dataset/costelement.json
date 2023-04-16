@@ -1,0 +1,62 @@
+{
+	"name": "costelement",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "GDM COST_ELEMENT",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "gdm_cost_element.xlsx",
+				"fileSystem": "input"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "CHART_OF_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "CREATE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_TIME",
+				"type": "String"
+			},
+			{
+				"name": "PAYMNT_RELEVNT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "TAX_RELEVNT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE",
+				"type": "String"
+			}
+		]
+	}
+}

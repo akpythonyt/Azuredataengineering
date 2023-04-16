@@ -1,0 +1,224 @@
+{
+	"name": "costfactsource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "cost_summary_fact_vr_data_full.csv",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "ACTIVITY_ID",
+				"type": "String"
+			},
+			{
+				"name": "AMT_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_FIXED_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_FIXVAR_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_OBJ",
+				"type": "String"
+			},
+			{
+				"name": "AMT_TRX",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_VALUE_CO_CURR",
+				"type": "String"
+			},
+			{
+				"name": "PLAN_VALUE_CO_CURR",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_VALUE_TXN_CURR",
+				"type": "String"
+			},
+			{
+				"name": "PLAN_VALUE_TXN_CURR",
+				"type": "String"
+			},
+			{
+				"name": "AMT_VAR_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "QTY",
+				"type": "String"
+			},
+			{
+				"name": "QTY_FIXED",
+				"type": "String"
+			},
+			{
+				"name": "DEB_CRED_IND",
+				"type": "String"
+			},
+			{
+				"name": "BUS_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "CMPNY_CODE_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_KEY_SUB_NUMBER_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_TRX_ID",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_LOC",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_OBJ",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_TRX",
+				"type": "String"
+			},
+			{
+				"name": "FISC_PERIOD",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YEAR",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YR_VARIANT_ID_CMPNY_CODE",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YR_VARIANT_ID_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "INTERNAL_ORDER_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_CLASS_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID_ORIGINAL",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID_PARTNER",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "PARTITION_YEAR",
+				"type": "String"
+			},
+			{
+				"name": "PERIOD_BLOCK_CODE",
+				"type": "String"
+			},
+			{
+				"name": "PROJ_ELEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "PROJ_ID",
+				"type": "String"
+			},
+			{
+				"name": "RECORD_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "TRADING_PARTNER_ID",
+				"type": "String"
+			},
+			{
+				"name": "TRX_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "UOM_ID",
+				"type": "String"
+			},
+			{
+				"name": "VERSION_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_TIME",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE",
+				"type": "String"
+			}
+		]
+	}
+}
