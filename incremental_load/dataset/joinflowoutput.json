@@ -1,0 +1,407 @@
+{
+	"name": "joinflowoutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "ACTIVITY_ID",
+				"type": "String"
+			},
+			{
+				"name": "AMT_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_FIXED_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_FIXVAR_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "AMT_OBJ",
+				"type": "String"
+			},
+			{
+				"name": "AMT_TRX",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_VALUE_CO_CURR",
+				"type": "String"
+			},
+			{
+				"name": "PLAN_VALUE_CO_CURR",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_VALUE_TXN_CURR",
+				"type": "String"
+			},
+			{
+				"name": "PLAN_VALUE_TXN_CURR",
+				"type": "String"
+			},
+			{
+				"name": "AMT_VAR_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "QTY",
+				"type": "String"
+			},
+			{
+				"name": "QTY_FIXED",
+				"type": "String"
+			},
+			{
+				"name": "DEB_CRED_IND",
+				"type": "String"
+			},
+			{
+				"name": "BUS_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "CMPNY_CODE_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_ID",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_AREA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_KEY_SUB_NUMBER_ID",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_TRX_ID",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_LOC",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_OBJ",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID_TRX",
+				"type": "String"
+			},
+			{
+				"name": "FISC_PERIOD",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YEAR",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YR_VARIANT_ID_CMPNY_CODE",
+				"type": "String"
+			},
+			{
+				"name": "FISC_YR_VARIANT_ID_CTRL_AREA",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "INTERNAL_ORDER_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_CLASS_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID_ORIGINAL",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_ID_PARTNER",
+				"type": "String"
+			},
+			{
+				"name": "OBJ_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "PARTITION_YEAR",
+				"type": "String"
+			},
+			{
+				"name": "PERIOD_BLOCK_CODE",
+				"type": "String"
+			},
+			{
+				"name": "PROJ_ELEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "PROJ_ID",
+				"type": "String"
+			},
+			{
+				"name": "RECORD_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "TRADING_PARTNER_ID",
+				"type": "String"
+			},
+			{
+				"name": "TRX_TYPE_ID",
+				"type": "String"
+			},
+			{
+				"name": "UOM_ID",
+				"type": "String"
+			},
+			{
+				"name": "VERSION_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_TIME",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE",
+				"type": "String"
+			},
+			{
+				"name": "_c0",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "COST_ELEM_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CREATE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "PAYMNT_RELEVNT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "TAX_RELEVNT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "ALT_FUNCTN",
+				"type": "String"
+			},
+			{
+				"name": "CITY",
+				"type": "String"
+			},
+			{
+				"name": "CMPNY_CODE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_ID_SUBSEQUENT",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_01",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_02",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_03",
+				"type": "String"
+			},
+			{
+				"name": "COST_CNTR_NAME_04",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_ID",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CREATED_BY",
+				"type": "String"
+			},
+			{
+				"name": "CTRL_AREA_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "CURR_ID",
+				"type": "String"
+			},
+			{
+				"name": "DEPARTMENT",
+				"type": "String"
+			},
+			{
+				"name": "DISTRICT",
+				"type": "String"
+			},
+			{
+				"name": "EQUITY_TYPE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "FAX",
+				"type": "String"
+			},
+			{
+				"name": "FUNCTN_CODE",
+				"type": "String"
+			},
+			{
+				"name": "PERSON_IN_CHARGE",
+				"type": "String"
+			},
+			{
+				"name": "PHONE",
+				"type": "String"
+			},
+			{
+				"name": "PROFIT_CNTR_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "PROFIT_CNTR_ID",
+				"type": "String"
+			},
+			{
+				"name": "REGION_ID",
+				"type": "String"
+			},
+			{
+				"name": "REGION_NAME",
+				"type": "String"
+			},
+			{
+				"name": "STREET",
+				"type": "String"
+			},
+			{
+				"name": "TYPE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "VALID_FROM_DATE",
+				"type": "String"
+			},
+			{
+				"name": "VALID_TO_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ZIP",
+				"type": "String"
+			},
+			{
+				"name": "BAL_SHEET_ACCT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "CHART_OF_ACCT_NAME",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_GRP",
+				"type": "String"
+			},
+			{
+				"name": "GL_ACCT_MASTER_DESCR",
+				"type": "String"
+			},
+			{
+				"name": "GRP_ACCT_NUM",
+				"type": "String"
+			},
+			{
+				"name": "PL_STMNT_ACCT_TYPE",
+				"type": "String"
+			}
+		]
+	}
+}
